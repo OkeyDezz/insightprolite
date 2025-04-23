@@ -11,7 +11,7 @@ export default function Home() {
     async function testConnection() {
       try {
         // Tenta obter a sessão atual para testar a conexão
-        const { data, error } = await supabase.auth.getSession()
+        const { error } = await supabase.auth.getSession()
 
         if (error) {
           throw error
